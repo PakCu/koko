@@ -83,6 +83,7 @@
 					$da = mysql_query($sa);
 					$ta = mysql_fetch_array($da);
 					if (!empty($ta['kokurikulum'])) { echo $ta['kokurikulum']; } else { echo "&nbsp;"; }
+					if (!empty($t['markah1'])) { echo '<br><span class="tkmarkah">('.output1($t['markah1']).'%)</span>'; }
 					?>
                   </td>
                   <td align="center" valign="top">
@@ -95,6 +96,7 @@
 					$da = mysql_query($sa);
 					$ta = mysql_fetch_array($da);
 					if (!empty($ta['kokurikulum'])) { echo $ta['kokurikulum']; } else { echo "&nbsp;"; }
+					if (!empty($t['markah2'])) { echo '<br><span class="tkmarkah">('.output1($t['markah2']).'%)</span>'; }
 					?>
                   </td>
                   <td align="center" valign="top">
@@ -107,9 +109,10 @@
 					$da = mysql_query($sa);
 					$ta = mysql_fetch_array($da);
 					if (!empty($ta['kokurikulum'])) { echo $ta['kokurikulum']; } else { echo "&nbsp;"; }
+					if (!empty($t['markah3'])) { echo '<br><span class="tkmarkah">('.output1($t['markah3']).'%)</span>'; }
 					?>
                   </td>
-                  <td align="center" valign="top"><a href="daftar.php?menu=kemaskini&id=<?php echo $t['sidp']; ?>">KEMASKINI</a></td>
+                  <td align="center" valign="top"><a href="markah.php?menu=kemaskini&id=<?php echo $t['sidp']; ?>">KEMASKINI</a></td>
                 </tr>
 			<?php
 			}

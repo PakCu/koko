@@ -1,0 +1,135 @@
+BODY {
+	background: #757575;
+	color: #000000;
+	font-size: 11px;
+	font-family: Tahoma, Verdana;
+	margin: 0px;
+}
+A:link {
+	color: #0000FF;
+	text-decoration: none;
+}
+A:visited {
+	color: #0000FF;
+	text-decoration: none;
+}
+A:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+TABLE {
+	background: #E0E0E0;
+	border-color: #FFFFFF;
+}
+.table2 {
+	background: #FFFFFF;
+}
+.input {
+	font-size: 11px;
+	font-family: Tahoma, Verdana;
+	border: 1px solid black;
+	text-transform: uppercase;
+	background: white; 
+	padding: 1px; 
+}
+.input2 {
+	font-size: 11px;
+	font-family: Tahoma, Verdana;
+	border: 1px solid black;
+	background: white; 
+	padding: 1px; 
+}
+.button	{
+	color: #FFFFFF;
+	font-family: Tahoma, Verdana; 
+	font-size: 11px; 
+	font-weight: bold;
+	border: 1px solid black; 
+	background: #000000; 
+}
+.tkmenu {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.tkmenu2 {
+	font-weight: bold;
+}
+.tkmenu3 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.tkmarkah {
+	color: #FF0000;
+	font-size: 10px;
+}
+.tksep {
+	font-size:3px;
+}
+.tkfooter {
+	font-size:9px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#sddm
+{	margin: 0 -4px;
+	padding: 0;
+	z-index: 30
+}
+
+#sddm li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+#sddm li a
+{	
+	margin: 0 1px 0 0;
+	padding: 4px 10px;
+	width: 70px;
+	background: #5970B2;
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none
+}
+
+#sddm li a:hover
+{	background: #49A3FF
+}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border: 1px solid #5970B2
+}
+
+#sddm div a
+{	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: auto;
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: #5970B2;
+	color: #FFFFFF;
+}
+
+#sddm div a:hover
+{	background: #49A3FF;
+	color: #FFF
+}
+
+#marqueecontainer {
+	position: relative;
+	width: 220px; /*marquee width */
+	height: 165px; /*marquee height */
+	overflow: hidden;
+	border: 0px;
+	padding: 0px;
+}

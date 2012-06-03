@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sistem Penilaian Kokurikulum Sekolah</title>
+<link rel="shortcut icon" href="files/favicon.ico">
+<link rel="stylesheet" type="text/css" href="files/style.css">
+<script type="text/javascript" src="files/jawa.js"></script>
+</head>
+
+<body>
+<table width="1000" border="1" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+    <table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr>
+        <td align="right" bgcolor="#112F8A" class="tkmenu">Selamat Datang, GURU! | 25/04/202 </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center"><img src="files/banner.png" width="1000"></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr>
+        <td align="left" bgcolor="#5970B2" class="tkmenu">
+			<ul id="sddm">
+				<li><a href="index.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">Utama</a></li>
+				<li><a href="dsenarai.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">Daftar Kokurikulum</a></li>
+				<li><a href="msenarai.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">Markah Kokurikulum</a></li>
+				<li><a href="laporan.html" onmouseover="mopen('m4')" onmouseout="mclosetime()">Laporan Penilaian</a></li>
+				<li><a href="kalendar.html" onmouseover="mopen('m5')" onmouseout="mclosetime()">Kalendar</a></li>
+				<li><a href="manual.html" onmouseover="mopen('m6')" onmouseout="mclosetime()">Manual Pengguna</a></li>
+				<li>
+                	<a href="#" onmouseover="mopen('m7')" onmouseout="mclosetime()">Tetapan</a>
+                    <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                        <a href="sesi.html">Sesi Persekolahan</a>
+                        <a href="kelas.html">Senarai Kelas</a>
+                        <a href="koko.html">Senarai Kokurikulum</a>
+                        <a href="guru.html">Senarai Guru</a>
+                        <a href="murid.html">Senarai Murid</a>
+                    </div>
+                </li>
+                <!--<li><a href="logout.html" onmouseover="mopen('m8')" onmouseout="mclosetime()">Log Keluar</a></li>-->
+			</ul>
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="2" cellspacing="0">
+      <tr>
+        <td width="100%" align="center" valign="top">
+          <form name="koko" action="dsenarai.html" method="post">
+          <table width="70%" border="1" cellspacing="0" cellpadding="5" class="table2">
+            <tr>
+              <td colspan="2" align="center" bgcolor="#49A3FF" class="tkmenu2">MARKAH KOKURIKULUM PELAJAR</td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" bgcolor="#999999" class="tkmenu2">Maklumat Pelajar</td>
+              </tr>
+            <tr>
+              <td width="29%" align="right" valign="middle" bgcolor="#CCCCCC">Nama Pelajar :</td>
+              <td width="71%" align="left" valign="middle"> NUR QARIRAH NAJWA BINTI MOHAMAD RAMADHAN </td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Darjah &amp; Kelas :</td>
+              <td align="left" valign="middle">1 AMANAH</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">No. Kad Pengenalan :</td>
+              <td align="left" valign="middle"> 050623141244 </td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Angka Giliran :</td>
+              <td align="left" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jantina : </td>
+              <td align="left" valign="middle">PEREMPUAN</td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" valign="middle" bgcolor="#999999" class="tkmenu2">Maklumat Kokurikulum</td>
+              </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Badan Uniform :</td>
+              <td align="left" valign="middle" class="tkmenu2">PBSM</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jawatan :</td>
+              <td align="left" valign="middle"><select name="jawatan1" class="input" id="jawatan1">
+                <option>PENGAKAP RAJA</option>
+                <option>PANDU PUTERI RAJA</option>
+                <option>PEGAWAI WARAN I</option>
+                <option>SUB-INSPEKTOR</option>
+                <option>DRUM MAJOR</option>
+                <option>PEGAWAI WARAN II</option>
+                <option>BINTARA KANAN</option>
+                <option>STAF SARJAN</option>
+                <option>SARJAN MEJAR</option>
+                <option>KETUA TRUP</option>
+                <option>ANUGERAH KETUA PESURUHJAYA</option>
+                <option>SARJAN</option>
+                <option>PENOLONG TRUP</option>
+                <option>BINTARA MUDA</option>
+                <option>KETUA PLATUN</option>
+                <option>KOPERAL</option>
+                <option>LANS KOPERAL</option>
+                <option>KETUA PATROL</option>
+                <option>PENOLONG KETUA PATROL</option>
+                <option>AJK</option>
+                <option>LASKAR KANAN</option>
+                <option>PRA-PERSETIAAN</option>
+                <option>AHLI AKTIF</option>
+                <option>AHLI BIASA</option>
+                
+                </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Penglibatan :</td>
+              <td align="left" valign="middle"><select name="sukan2" class="input" id="sukan9">
+                <option>SEKOLAH</option>
+                <option>ZON/DAERAH/BAHAGIAN</option>
+                <option>NEGERI</option>
+                <option>KEBANGSAAN</option>
+                <option>ANTARABANGSA</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Pencapaian :</td>
+              <td align="left" valign="middle"><select name="sukan2" class="input" id="sukan8">
+                <option></option>
+                <option>JOHAN</option>
+                <option>NAIB JOHAN</option>
+                <option>KETIGA</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jumlah Kehadiran :</td>
+              <td align="left" valign="middle"><input name="hadir1" type="text" class="input" id="hadir1" placeholder="makan" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jumlah Perjumpaan :</td>
+              <td align="left" valign="middle"><input name="hadir2" type="text" class="input" id="hadir2" value="18" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Lulus Tidak Hadir :</td>
+              <td align="left" valign="middle"><input name="hadir3" type="text" class="input" id="hadir3" value="2" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC" class="tkmenu2">Markah Total :</td>
+              <td align="left" valign="middle"><input name="hadir4" type="text" class="input" id="hadir4" value="82" size="5" maxlength="2" readonly></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC" class="tkmenu2">Gred :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir5" value="A" size="5" maxlength="2" readonly></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+              <td align="left" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Kelab/Persatuan :</td>
+              <td align="left" valign="middle" class="tkmenu2">KAJIAN TEMPATAN</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jawatan :</td>
+              <td align="left" valign="middle"><select name="jawatan2" class="input" id="jawatan2">
+                <option>PENGERUSI</option>
+                <option>PRESIDEN</option>
+                <option>TIMBALAN PENGERUSI</option>
+                <option>NAIB PENGERUSI</option>
+                <option>SETIAUSAHA</option>
+                <option>BENDAHARI</option>
+                <option>PENOLONG SETIAUSAHA</option>
+                <option>PENOLONG BENDAHARI</option>
+                <option>AHLI JAWATANKUASA</option>
+                <option>AHLI AKTIF</option>
+                <option>AHLI BIASA</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Penglibatan :</td>
+              <td align="left" valign="middle"><select name="sukan3" class="input" id="sukan3">
+                <option>SEKOLAH</option>
+                <option>ZON/DAERAH/BAHAGIAN</option>
+                <option>NEGERI</option>
+                <option>KEBANGSAAN</option>
+                <option>ANTARABANGSA</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Pencapaian :</td>
+              <td align="left" valign="middle"><select name="sukan3" class="input" id="sukan2">
+                <option></option>
+                <option>JOHAN</option>
+                <option>NAIB JOHAN</option>
+                <option>KETIGA</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jumlah Kehadiran :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir10" value="11" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jumlah Perjumpaan :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir9" value="12" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Lulus Tidak Hadir :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir8" value="1" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC" class="tkmenu2">Markah Total :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir7" value="87" size="5" maxlength="2" readonly></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC" class="tkmenu2">Gred :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir6" value="A" size="5" maxlength="2" readonly></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+              <td align="left" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Sukan/Permainan :</td>
+              <td align="left" valign="middle" class="tkmenu2">PING PONG</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jawatan :</td>
+              <td align="left" valign="middle"><select name="jawatan2" class="input" id="jawatan3">
+                <option>PENGERUSI</option>
+                <option>PRESIDEN</option>
+                <option>TIMBALAN PENGERUSI</option>
+                <option>NAIB PENGERUSI</option>
+                <option>SETIAUSAHA</option>
+                <option>BENDAHARI</option>
+                <option>PENOLONG SETIAUSAHA</option>
+                <option>PENOLONG BENDAHARI</option>
+                <option>AHLI JAWATANKUASA</option>
+                <option>AHLI AKTIF</option>
+                <option>AHLI BIASA</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Penglibatan :</td>
+              <td align="left" valign="middle"><select name="sukan3" class="input" id="sukan5">
+                <option>SEKOLAH</option>
+                <option>ZON/DAERAH/BAHAGIAN</option>
+                <option>NEGERI</option>
+                <option>KEBANGSAAN</option>
+                <option>ANTARABANGSA</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Pencapaian :</td>
+              <td align="left" valign="middle"><select name="sukan3" class="input" id="sukan4">
+                <option></option>
+                <option>JOHAN</option>
+                <option>NAIB JOHAN</option>
+                <option>KETIGA</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jumlah Kehadiran :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir15" value="12" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jumlah Perjumpaan :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir14" value="12" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Lulus Tidak Hadir :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir13" value="0" size="5" maxlength="2"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC" class="tkmenu2">Markah Total :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir12" value="92" size="5" maxlength="2" readonly></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC" class="tkmenu2">Gred :</td>
+              <td align="left" valign="middle"><input name="hadir5" type="text" class="input" id="hadir11" value="A" size="5" maxlength="2" readonly></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+              <td align="left" valign="middle"><input name="submit" type="submit" class="button" id="submit" value="Hantar">
+                <input name="Reset" type="reset" class="button" id="submit" value="Reset"></td>
+            </tr>
+          </table>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr>
+        <td align="center" bgcolor="#112F8A" class="tkfooter">Hakcipta &copy; 2012</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

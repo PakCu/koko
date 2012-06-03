@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sistem Penilaian Kokurikulum Sekolah</title>
+<link rel="shortcut icon" href="files/favicon.ico">
+<link rel="stylesheet" type="text/css" href="files/style.css">
+<script type="text/javascript" src="files/jawa.js"></script>
+</head>
+
+<body>
+<table width="1000" border="1" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+    <table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr>
+        <td align="right" bgcolor="#112F8A" class="tkmenu">Selamat Datang, GURU! | 25/04/202 </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center"><img src="img/banner.png" width="1000"></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr>
+        <td align="left" bgcolor="#5970B2" class="tkmenu">
+			<ul id="sddm">
+				<li><a href="index.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">Utama</a></li>
+				<li><a href="dsenarai.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">Daftar Kokurikulum</a></li>
+				<li><a href="msenarai.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">Markah Kokurikulum</a></li>
+				<li><a href="laporan.html" onmouseover="mopen('m4')" onmouseout="mclosetime()">Laporan Penilaian</a></li>
+				<li><a href="kalendar.html" onmouseover="mopen('m5')" onmouseout="mclosetime()">Kalendar</a></li>
+				<li><a href="manual.html" onmouseover="mopen('m6')" onmouseout="mclosetime()">Manual Pengguna</a></li>
+				<li>
+                	<a href="#" onmouseover="mopen('m7')" onmouseout="mclosetime()">Tetapan</a>
+                    <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                        <a href="sesi.html">Sesi Persekolahan</a>
+                        <a href="kelas.html">Senarai Kelas</a>
+                        <a href="koko.html">Senarai Kokurikulum</a>
+                        <a href="guru.html">Senarai Guru</a>
+                        <a href="murid.html">Senarai Murid</a>
+                    </div>
+                </li>
+                <!--<li><a href="logout.html" onmouseover="mopen('m8')" onmouseout="mclosetime()">Log Keluar</a></li>-->
+			</ul>
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="2" cellspacing="0">
+      <tr>
+        <td width="100%" align="center" valign="top">
+          <form name="koko" action="dsenarai.html" method="post">
+          <table width="70%" border="1" cellspacing="0" cellpadding="5" class="table2">
+            <tr>
+              <td colspan="2" align="center" bgcolor="#49A3FF" class="tkmenu2">PENDAFTARAN KOKURIKULUM PELAJAR</td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" bgcolor="#999999" class="tkmenu2">Maklumat Pelajar</td>
+              </tr>
+            <tr>
+              <td width="29%" align="right" valign="middle" bgcolor="#CCCCCC">Nama Pelajar :</td>
+              <td width="71%" align="left" valign="middle"> NUR QARIRAH NAJWA BINTI MOHAMAD RAMADHAN </td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Darjah &amp; Kelas :</td>
+              <td align="left" valign="middle">1 AMANAH</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">No. Kad Pengenalan :</td>
+              <td align="left" valign="middle"> 050623141244 </td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Angka Giliran :</td>
+              <td align="left" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Jantina : </td>
+              <td align="left" valign="middle">PEREMPUAN</td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" valign="middle" bgcolor="#999999" class="tkmenu2">Maklumat Kokurikulum</td>
+              </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Badan Uniform :</td>
+              <td align="left" valign="middle"><select name="uniform" class="input" id="uniform">
+                <option>PENGAKAP</option>
+                <option>PANDU PUTERI</option>
+                <option>PBSM</option>
+                <option>POLIS</option>
+                <option>BOMBA</option>
+                <option>RENJER PUTERI</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Kelab/Persatuan :</td>
+              <td align="left" valign="middle"><select name="kelab" class="input" id="kelab">
+                <option>PENDIDIKAN ISLAM</option>
+                <option>BAHASA MELAYU</option>
+                <option>BAHASA INGGERIS</option>
+                <option>BAHASA ARAB</option>
+                <option>SEJARAH &amp; GEORGRAFI</option>
+                <option>SAINS &amp; MATEMATIK</option>
+                <option>ICT</option>
+                <option>SENI &amp; BUDAYA</option>
+                <option>KATERING</option>
+                <option>USAHAWAN MUDA &amp; KEMAHIRAN HIDUP</option>
+                <option>KOPERASI</option>
+                <option>KAUNSELING</option>
+                <option>PENGGUNA</option>
+                <option>RUKUN NEGARA</option>
+                <option>PENCEGAH JENAYAH</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Sukan/Permainan :</td>
+              <td align="left" valign="middle"><select name="sukan" class="input" id="sukan">
+                <option>BADMINTON</option>
+                <option>BOLA JARING</option>
+                <option>BOLA SEPAK</option>
+                <option>BOLA TAMPAR</option>
+                <option>HOKI</option>
+                <option>PING PONG</option>
+                <option>SEPAK TAKRAW</option>
+                <option>PETANQUE</option>
+                <option>MEMANAH</option>
+                <option>OLAHRAGA</option>
+                <option>PERMAINAN DALAM</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+              <td align="left" valign="middle"><input name="submit" type="submit" class="button" id="submit" value="Hantar">
+                <input name="Reset" type="reset" class="button" id="submit" value="Reset"></td>
+            </tr>
+          </table>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr>
+        <td align="center" bgcolor="#112F8A" class="tkfooter">Hakcipta &copy; 2012</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

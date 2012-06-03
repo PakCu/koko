@@ -20,12 +20,12 @@ if (isset($_SESSION['user']) && $tm['ulevel'] == 1) {
 				}
 				break;
 	
-			case "kemaskini":
+			case "kemaskinikelas":
 				if (!empty($_POST['tahun'])) {
-					include('inc/sesi_daftar.php');
+					include('inc/sesi_kelas.php');
 				}
 				else {
-					include('tmp/sesi_kemaskini.php');
+					include('tmp/sesi_kelaskemaskini.php');
 				}
 				break;
 	

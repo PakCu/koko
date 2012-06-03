@@ -56,7 +56,7 @@
         <?php
 		//gabungkan table sesi, table tahun, table kelas
 		$s = "SELECT s.*, t.*, k.*
-			FROM sesi AS s, tahun AS t, kelas AS k
+			FROM sesikelas AS s, tahun AS t, kelas AS k
 			WHERE s.tahun = t.tahun
 			AND s.kid = k.kid
 			AND t.tahun = '" . input1($tahun) . "'
@@ -70,7 +70,21 @@
             <tr>
               <td align="center" valign="top"><?php echo $n; ?></td>
               <td align="left" valign="top"><?php echo output1($t['kelas']); ?></td>
-              <td align="left" valign="top"><?php echo output1($t['unama']); ?></td>
+              <td align="left" valign="top">
+			  	<?php 
+				//dptkan maklumat guru
+				$sx = "SELECT * FROM user 
+					WHERE unokp = '" . input1($t['unokp']) . "'
+					ORDER BY unokp ASC
+				";
+				$dx = mysql_query($sx);
+				if (mysql_num_rows($dx) >= 1) {
+					$tx = mysql_fetch_array($dx);
+					echo '<a href="sesi.php?menu=kemaskinikelas&id='.$t['sidk'].'">'.output1($tx['unama']).'</a>';
+				}
+				else { echo "&nbsp;"; }
+				?>
+              </td>
               <td align="center" valign="top"><?php echo output1($t['unokp']); ?></td>
             </tr>
         <?php

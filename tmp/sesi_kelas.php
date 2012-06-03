@@ -6,7 +6,7 @@
           <td align="center" class="tkmenu3">[ <a href="sesi.php?menu=kelas">TAMBAH KELAS & GURU</a> ] [ <a href="sesi.php?menu=pelajar">TAMBAH PELAJAR</a> ]</td>
         </tr>
       </table>
-      <form name="kelas" action="sesi.php?menu=senarai" method="post">
+      <form name="kelas" action="sesi.php?menu=kelas" method="post">
       <table width="70%" border="1" cellspacing="0" cellpadding="5">
         <tr>
           <td align="center" bgcolor="#49A3FF" class="tkmenu2">DAFTAR KELAS SESI PERSEKOLAHAN</td>
@@ -43,7 +43,7 @@
         </tr>
         <tr>
           <td align="right" valign="middle" bgcolor="#CCCCCC">Nama Guru :</td>
-          <td align="left" valign="middle"><select name="tahun" class="input" id="tahun">
+          <td align="left" valign="middle"><select name="guru" class="input" id="guru">
             <?php
 			$sx = "SELECT * FROM user  
 				WHERE ulevel = 2

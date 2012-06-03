@@ -31,7 +31,7 @@
 				//jika dah login
 				if (isset($_SESSION['user'])) {
 					?>
-                    <li><a href="daftar.php" onmouseover="mopen('m2')" onmouseout="mclosetime()">Daftar Kokurikulum</a></li>
+                    <li><a href="daftar.php?menu=senarai" onmouseover="mopen('m2')" onmouseout="mclosetime()">Daftar Kokurikulum</a></li>
                     <li><a href="markah.php" onmouseover="mopen('m3')" onmouseout="mclosetime()">Markah Kokurikulum</a></li>
                     <li><a href="laporan.php" onmouseover="mopen('m4')" onmouseout="mclosetime()">Laporan Penilaian</a></li>
                     <li><a href="kalendar.php" onmouseover="mopen('m5')" onmouseout="mclosetime()">Kalendar</a></li>

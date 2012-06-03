@@ -8,7 +8,7 @@
 		WHERE s.tahun = t.tahun
 		AND s.kid = k.kid
 		AND s.sidk = '" . input1($_GET['id']) . "'
-		ORDER BY k.kelas ASC
+		ORDER BY s.sidk ASC
 	  ";
 	  $d = mysql_query($s);
 	  //jika maklumat ada sah
@@ -81,7 +81,7 @@
                 <td align="left" valign="middle"><?php echo output1($tx['pnama']); ?></td>
                 <td align="center" valign="top"><?php echo output1($tx['pnokp']); ?></td>
                 <td align="center" valign="top"><?php echo output1($tx['pjantina']); ?></td>
-                <td align="center" valign="top"><?php echo output1($tx['pnogiliran']); ?></td>
+                <td align="center" valign="top"><?php if (!empty($tx['pnogiliran'])) { echo output1($tx['pnogiliran']); } else { echo "&nbsp;"; } ?></td>
                 <td align="center" valign="middle"><a href="sesi.php?menu=kemaskinipelajar&di=<?php echo $tx['sidp']; ?>">HAPUS</a></td>
               </tr>
           <?php

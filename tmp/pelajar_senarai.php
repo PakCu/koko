@@ -35,7 +35,7 @@
               <td align="left" valign="top"><?php echo output1($t['pnama']); ?></td>
               <td align="center" valign="top"><?php echo output1($t['pnokp']); ?></td>
               <td align="center" valign="top"><?php echo output1($t['pjantina']); ?></td>
-              <td align="center" valign="top"><?php echo output1($t['pnogiliran']); ?></td>
+              <td align="center" valign="top"><?php if (!empty($t['pnogiliran'])) { echo output1($t['pnogiliran']); } else { echo "&nbsp;"; } ?></td>
               <td align="center" valign="top"><a href="pelajar.php?menu=kemaskini&id=<?php echo $t['pid']; ?>">KEMASKINI</a></td>
             </tr>
         <?php

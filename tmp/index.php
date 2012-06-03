@@ -84,16 +84,18 @@
           <td align="left">
             <DIV id="marqueecontainer" onmouseover="copyspeed=pausespeed" onmouseout="copyspeed=marqueespeed">
             <DIV style="width: 98%; position: absolute;" id="vmarquee">
-            &plusmn; Pengumuman pertama<br>
-            &plusmn; Pengumuman kedua<br>
-            &plusmn; Pengumuman ketiga<br>
-            &plusmn; Pengumuman keempat<br>
-            &plusmn; Pengumuman kelima<br>
-            &plusmn; Pengumuman keenam<br>
-            &plusmn; Pengumuman ketujuh<br>
-            &plusmn; Pengumuman kelapan<br>
-            &plusmn; Pengumuman kesembilan<br>
-            &plusmn; Pengumuman kesepuluh<br>
+            <?php
+			$sx = "SELECT * FROM info
+				ORDER BY id DESC
+				LIMIT 0,10
+			";
+			$dx = mysql_query($sx);
+			while ($tx = mysql_fetch_array($dx)) {
+				?>
+            	&plusmn; <?php echo ucfirst(output2($tx['info'])); ?><br>
+            <?php
+			}
+			?>
             </DIV></DIV>
           </td>
         </tr>

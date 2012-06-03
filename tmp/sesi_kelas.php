@@ -1,11 +1,7 @@
 <table width="100%" border="0" cellpadding="2" cellspacing="0">
   <tr>
     <td width="100%" align="center" valign="top">
-      <table width="70%" border="0" cellspacing="0" cellpadding="5">
-        <tr>
-          <td align="center" class="tkmenu3">[ <a href="sesi.php?menu=kelas">TAMBAH KELAS & GURU</a> ] [ <a href="sesi.php?menu=pelajar">TAMBAH PELAJAR</a> ]</td>
-        </tr>
-      </table>
+      <br>
       <form name="kelas" action="sesi.php?menu=kelas" method="post">
       <table width="70%" border="1" cellspacing="0" cellpadding="5">
         <tr>

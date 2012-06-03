@@ -29,6 +29,24 @@ if (isset($_SESSION['user']) && $tm['ulevel'] == 1) {
 				}
 				break;
 	
+			case "pelajar":
+				include('tmp/sesi_pelajar.php');
+				break;
+	
+			case "kemaskinipelajar":
+				//hapus pelajar
+				if (!empty($_GET['di'])) {
+					include('inc/sesi_pelajar.php');
+				}
+				//daftar pelajar
+				elseif (!empty($_POST['nokp'])) {
+					include('inc/sesi_pelajar.php');
+				}
+				else {
+					include('tmp/sesi_pelajarkemaskini.php');
+				}
+				break;
+					
 			default:
 				echo '<meta http-equiv="Refresh" content="0;url=index.php">';
 				break;

@@ -3,7 +3,7 @@
     <td width="100%" align="center" valign="top">
       <table width="70%" border="0" cellspacing="0" cellpadding="5">
         <tr>
-          <td align="center" class="tkmenu3">[ <a href="sesi.php?menu=kelas">TAMBAH KELAS & GURU</a> ] [ <a href="sesi.php?menu=pelajar">TAMBAH PELAJAR</a> ]</td>
+          <td align="center" class="tkmenu3">[ <a href="sesi.php?menu=kelas">TAMBAH KELAS & GURU</a> ]</td>
         </tr>
       </table>
       <form name="sesi" action="sesi.php?menu=senarai" method="post">
@@ -69,7 +69,7 @@
 			?>
             <tr>
               <td align="center" valign="top"><?php echo $n; ?></td>
-              <td align="left" valign="top"><?php echo output1($t['kelas']); ?></td>
+              <td align="left" valign="top"><?php echo '<a href="sesi.php?menu=pelajar&id='.$t['sidk'].'">'.output1($t['kelas']).'</a>'; ?></td>
               <td align="left" valign="top">
 			  	<?php 
 				//dptkan maklumat guru
@@ -85,7 +85,16 @@
 				else { echo "&nbsp;"; }
 				?>
               </td>
-              <td align="center" valign="top"><?php echo output1($t['unokp']); ?></td>
+              <td align="center" valign="top">
+			  	  <?php 
+				  $sx = "SELECT * FROM sesipelajar 
+					WHERE sidk = '".input1($t['sidk'])."'
+					ORDER BY pnokp ASC
+				  ";
+				  $dx = mysql_query($sx);
+				  echo mysql_num_rows($dx); 
+				?>
+              </td>
             </tr>
         <?php
 		}

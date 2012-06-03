@@ -42,4 +42,13 @@ if (!empty($_SESSION['user'])) {
 	$dm = mysql_query($sm);
 	$tm = mysql_fetch_array($dm);
 }
+
+//gred markah
+function gred($markah) {
+	if ($markah > 79) { return "A"; }
+	elseif ($markah > 59) { return "B"; }
+	elseif ($markah > 39) { return "C"; }
+	elseif ($markah > 19) { return "D"; }
+	else { return "E"; }	
+}
 ?>

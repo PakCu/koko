@@ -53,6 +53,7 @@
 								<a href="guru.php?menu=senarai">Senarai Guru</a>
 								<a href="pelajar.php?menu=senarai">Senarai Pelajar</a>
 								<a href="sesi.php?menu=senarai">Sesi Persekolahan</a>
+								<a href="info.php?menu=senarai">Senarai Pengumuman</a>
 							</div>
 						</li>
 					<?php

@@ -6,7 +6,6 @@
           <td align="center" class="tkmenu3">[ <a href="sesi.php?menu=kelas">TAMBAH KELAS & GURU</a> ]</td>
         </tr>
       </table>
-      <form name="sesi" action="sesi.php?menu=senarai" method="post">
       <?php
 	  //dptkan tahun default
 	  if (!empty($_POST['tahun'])) { $tahun = $_POST['tahun']; }
@@ -20,6 +19,7 @@
 	  }
 	  ?>
       <table width="70%" border="0" cellspacing="0" cellpadding="2">
+      	<form name="sesi" action="sesi.php?menu=senarai" method="post">
         <tr>
           <td width="87%" align="right">Tahun :</td>
           <td width="5%" align="right"><select name="tahun" id="tahun" class="input">
@@ -39,8 +39,8 @@
           </select></td>
           <td width="8%" align="right"><input name="submit" type="submit" class="button" id="submit" value="Hantar" /></td>
         </tr>
+        </form>
       </table>
-      </form>
       <table width="70%" border="1" cellspacing="0" cellpadding="5">
         <tr>
           <td align="center" bgcolor="#49A3FF" class="tkmenu2">SENARAI KELAS TAHUN <?php echo $tahun; ?></td>

@@ -28,6 +28,23 @@ else {
 	$penglibatan3 = explode("|",$_POST['penglibatan3']);
 	$penglibatan3 = $penglibatan3[0];
 	
+	//dptkan markah keseluruhan 2 terbaik
+	if ($_POST['markah1'] > $_POST['markah2']) {
+		if ($_POST['markah1'] > $_POST['markah3']) {
+			if ($_POST['markah2'] > $_POST['markah3']) { $markah = $_POST['markah1'] + $_POST['markah2']; } //uniform + kelab
+			else { $markah = $_POST['markah1'] + $_POST['markah3']; } //uniform + sukan
+		}
+		else { $markah = $_POST['markah3'] + $_POST['markah1']; } //sukan + uniform
+	}
+	else { // $x < $y
+		if ($_POST['markah1'] > $_POST['markah3']) { $markah = $_POST['markah2'] + $_POST['markah1']; } //kelab + uniform
+		else {
+			if ($_POST['markah2'] > $_POST['markah3']) { $markah = $_POST['markah2'] + $_POST['markah3']; } //kelab + sukan
+			else { $markah = $_POST['markah3'] + $_POST['markah2']; } //sukan + kelab
+		}
+	}
+	$markah = $markah / 2;
+	
 	$s = "UPDATE sesipelajar SET
 		jawatan1 = '" . input1($jawatan1) . "',
 		jawat1 = '" . input1($_POST['jawat1']) . "',
@@ -60,7 +77,10 @@ else {
 		hadir8 = '" . input1($_POST['hadir8']) . "',
 		hadir9 = '" . input1($_POST['hadir9']) . "',
 		markah3 = '" . input1($_POST['markah3']) . "',
-		gred3 = '" . input1($_POST['gred3']) . "'
+		gred3 = '" . input1($_POST['gred3']) . "',
+		
+		markah = '" . input1($markah) . "',
+		gred = '" . input1(gred($markah)) . "'
 		
 		WHERE sidp = '" . input1($_POST['id']) . "'
 	";

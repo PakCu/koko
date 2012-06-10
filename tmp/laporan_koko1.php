@@ -13,11 +13,21 @@
 		  $tx = mysql_fetch_array($dx);
 		  $tahun = $tx['tahun'];
 	  }
+	  //dptkan kelas default
+	  if (!empty($_POST['kelas'])) { $kelas = $_POST['kelas']; }
+	  else {
+		  $sx = "SELECT * FROM kelas
+			  ORDER BY kelas ASC
+		  ";
+		  $dx = mysql_query($sx);
+		  $tx = mysql_fetch_array($dx);
+		  $kelas = $tx['kelas'];
+	  }
 	  ?>
       <table width="100%" border="0" cellspacing="0" cellpadding="2">
       	<form name="koko" action="laporan.php?menu=senarai" method="post">
         <tr>
-          <td width="87%" align="right">Tahun :</td>
+          <td width="86%" align="right">Tahun :</td>
           <td width="5%" align="right"><select name="tahun" id="tahun" class="input">
           	<?php
 			$sx = "SELECT * FROM tahun
@@ -33,7 +43,22 @@
 			}
 			?>
           </select></td>
-          <td width="8%" align="right"><input name="submit" type="submit" class="button" id="submit" value="Hantar" /></td>
+          <td width="3%" align="right"><select name="kelas" id="kelas" class="input">
+            <?php
+			$sx = "SELECT * FROM kelas
+				ORDER BY kelas ASC
+			";
+			$dx = mysql_query($sx);
+			while ($tx = mysql_fetch_array($dx)) {
+				if ($tx['kelas'] == $kelas) { $select = 'selected="selected"'; }
+				else { $select = ""; }
+				?>
+            <option value="<?php echo $tx['kelas']; ?>" <?php echo $select; ?>><?php echo $tx['kelas']; ?></option>
+            <?php
+			}
+			?>
+          </select></td>
+          <td width="6%" align="right"><input name="submit" type="submit" class="button" id="submit" value="Hantar" /></td>
         </tr>
         </form>
       </table>
@@ -64,6 +89,7 @@
 			AND s.pnokp = p.pnokp
 			AND d.kid = k.kid
 			AND d.tahun = '".input1($tahun)."'
+			AND k.kelas = '".input1($kelas)."'
 			ORDER BY k.kelas,p.pnama ASC
 	  	";
 	  	$d = mysql_query($s);

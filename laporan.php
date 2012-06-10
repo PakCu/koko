@@ -8,7 +8,14 @@ if (isset($_SESSION['user'])) {
 	if (!empty($_GET['menu'])) {
 		switch($_GET['menu']) {
 			case "senarai":
-				include('tmp/laporan_koko.php');
+				//jika admin, paparkan semua pelajar
+				if ($tm['ulevel'] == 1) {
+					include('tmp/laporan_koko1.php');
+				}
+				//jika guru biasa, paparkan murid kelas berkenaan sahaja
+				else {
+					include('tmp/laporan_koko2.php');
+				}
 				break;
 	
 			case "pelajar":

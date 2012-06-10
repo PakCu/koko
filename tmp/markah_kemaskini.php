@@ -308,11 +308,33 @@
             </tr>
             <tr>
               <td align="right" valign="middle" bgcolor="#CCCCCC" class="tkmenu2">Jumlah Markah :</td>
-              <td align="left" valign="middle"><input name="markah3" type="text" class="input" id="markah3" value="<?php echo $t['markah3']; ?>" value="0" size="5" maxlength="2" readonly="readonly" /></td>
+              <td align="left" valign="middle"><input name="markah3" type="text" class="input" id="markah3" value="<?php echo $t['markah3']; ?>" size="5" maxlength="2" readonly="readonly" /></td>
             </tr>
             <tr>
               <td align="right" valign="middle" bgcolor="#CCCCCC" class="tkmenu2">Gred :</td>
               <td align="left" valign="middle"><input name="gred3" type="text" class="input" id="gred3" value="<?php if (!empty($t['gred3'])) { echo $t['gred3']; } else { echo "E"; } ?>" size="5" maxlength="2" readonly="readonly" /></td>
+            </tr>
+            <tr>
+              <td width="25%" align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+              <td width="75%" align="left" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" valign="middle" bgcolor="#CCCCCC">Markah Bonus :</td>
+              <td align="left" valign="middle" class="tkmenu2"><select name="bonus" class="input" id="bonus" onchange="mbonus(this.value);">
+              	<option value=""></option>
+                <?php
+				$sx = "SELECT * FROM bonus ORDER BY markah DESC,bonus ASC";
+				$dx = mysql_query($sx);
+				while ($tx = mysql_fetch_array($dx)) {
+					if ($tx['bonus'] == $t['bonus']) { $select = 'selected="selected"'; }
+					else { $select = ""; }
+					?>
+                	<option value="<?php echo $tx['bonus']."|".$tx['markah']; ?>" <?php echo $select; ?>><?php echo $tx['bonus']; ?></option>
+                <?php	
+                }
+                ?>
+              </select>
+              <input name="bns" type="hidden" value="<?php if (!empty($t['bonus'])) { echo $t['bns']; } else { echo "0"; } ?>" /></td>
             </tr>
             <tr>
               <td align="right" valign="top" bgcolor="#CCCCCC">&nbsp;</td>

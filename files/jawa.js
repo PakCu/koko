@@ -327,6 +327,11 @@ function mcapai3(opt) {
 	else { var nilai = 0; }
 	document.koko.capai3.value = nilai;
 }
+function mbonus() {
+	var bonus = document.koko.bonus.options[document.koko.bonus.selectedIndex].value;
+	var bonusSplit = bonus.split("|");
+	document.koko.bns.value = bonusSplit[1];
+}
 
 // AUTOCALCULATE
 function startKira1() {

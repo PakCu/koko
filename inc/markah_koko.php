@@ -27,6 +27,8 @@ else {
 	$jawatan3 = $jawatan3[0];
 	$penglibatan3 = explode("|",$_POST['penglibatan3']);
 	$penglibatan3 = $penglibatan3[0];
+	$bonus = explode("|",$_POST['bonus']);
+	$bonus = $bonus[0];
 	
 	//dptkan markah keseluruhan 2 terbaik
 	if ($_POST['markah1'] > $_POST['markah2']) {
@@ -43,7 +45,7 @@ else {
 			else { $markah = $_POST['markah3'] + $_POST['markah2']; } //sukan + kelab
 		}
 	}
-	$markah = $markah / 2;
+	$markah = $markah / 2 + $_POST['bns'];
 	
 	$s = "UPDATE sesipelajar SET
 		jawatan1 = '" . input1($jawatan1) . "',
@@ -78,6 +80,9 @@ else {
 		hadir9 = '" . input1($_POST['hadir9']) . "',
 		markah3 = '" . input1($_POST['markah3']) . "',
 		gred3 = '" . input1($_POST['gred3']) . "',
+		
+		bonus = '".input1($bonus)."',
+		bns = '".input1($_POST['bns'])."',
 		
 		markah = '" . input1($markah) . "',
 		gred = '" . input1(gred($markah)) . "'

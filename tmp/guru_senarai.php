@@ -35,7 +35,7 @@
               <td align="left" valign="top"><?php echo output1($t['unama']); ?></td>
               <td align="center" valign="top"><?php echo output1($t['unokp']); ?></td>
               <td align="center" valign="top"><?php if (!empty($t['ujawatan'])) { echo output1($t['ujawatan']); } else { echo "&nbsp;"; } ?></td>
-              <td align="center" valign="top"><?php if ($t['kokurikulum'] == 1) { echo "PENTADBIR"; } else { echo "GURU"; } ?></td>
+              <td align="center" valign="top"><?php if ($t['ulevel'] == 1) { echo "PENTADBIR"; } else { echo "GURU"; } ?></td>
               <td align="center" valign="top"><a href="guru.php?menu=kemaskini&id=<?php echo $t['uid']; ?>">KEMASKINI</a></td>
             </tr>
         <?php

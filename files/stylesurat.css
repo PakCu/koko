@@ -1,0 +1,11 @@
+BODY {
+	background: #FFFFFF;
+	color: #000000;
+	font-size: 11px;
+	font-family: Tahoma, Verdana;
+	margin: 0px;
+}
+.tkmenu {
+	font-weight: bold;
+	font-size: 12px;
+}

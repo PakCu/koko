@@ -85,11 +85,13 @@
             <DIV id="marqueecontainer" onmouseover="copyspeed=pausespeed" onmouseout="copyspeed=marqueespeed">
             <DIV style="width: 98%; position: absolute;" id="vmarquee">
             <?php
+			//limit 10 berita terkini
 			$sx = "SELECT * FROM info
 				ORDER BY id DESC
 				LIMIT 0,10
 			";
 			$dx = mysql_query($sx);
+			//$dx = mysql_query($sx) or die(mysql_error().$sx);
 			while ($tx = mysql_fetch_array($dx)) {
 				?>
             	&plusmn; <?php echo ucfirst(output2($tx['info'])); ?><br>

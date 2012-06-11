@@ -35,7 +35,7 @@ else {
 
 		if (mysql_num_rows($d) == 1) {
 			$t = mysql_fetch_array($d);
-			$_SESSION['user'] = $t['unokp'];
+			$_SESSION['user'] = $t['unokp']; //daftar session pengguna
 			?>
 			<meta http-equiv="Refresh" content="2;url=index.php">
             <table width="100%" cellspacing="0" cellpadding="2" border="0"><tr><td height="250" align="center" valign="middle">

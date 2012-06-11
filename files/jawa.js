@@ -333,7 +333,7 @@ function mbonus() {
 	document.koko.bns.value = bonusSplit[1];
 }
 
-// AUTOCALCULATE
+// AUTO CALCULATE
 function startKira1() {
   interval = setInterval("kira1()",1);
 }

@@ -99,7 +99,7 @@
 			?>
 			<tr>
 			  <td align="center" valign="top"><?php echo $n; ?></td>
-			  <td align="left" valign="top"><a href="laporan.php?menu=pelajar&id=<?php echo $t['pnokp']; ?>"><?php echo output1($t['pnama']); ?></a></td>
+			  <td align="left" valign="top"><a href="laporan.php?menu=pelajar&id=<?php echo $t['pnokp']; ?>&tahun=<?php echo $tahun; ?>"><?php echo output1($t['pnama']); ?></a></td>
 			  <td align="center" valign="top"><?php echo output1($t['kelas']); ?></td>
 			  <td align="center" valign="top"><?php if (!empty($t['pnogiliran'])) { echo output1($t['pnogiliran']); } else { echo "&nbsp;"; } ?></td>
 			  <td align="center" valign="top">
